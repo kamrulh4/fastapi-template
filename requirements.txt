@@ -1,0 +1,19 @@
+fastapi
+uvicorn[standard]
+tortoise-orm
+asyncpg
+python-jose
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
+pydantic-settings
+python-dotenv
+email-validator
+python-multipart
+aerich
+
+# Testing
+pytest
+pytest-asyncio
+aiosqlite
+httpx
+asgi-lifespan

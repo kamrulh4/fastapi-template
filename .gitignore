@@ -1,0 +1,24 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.idea/
+.vscode/
+.cache/
+dist/
+build/
+*.egg-info/
+
+# Environment
+.env
+
+# Coverage / test reports
+.coverage
+coverage.xml
+htmlcov/
+
