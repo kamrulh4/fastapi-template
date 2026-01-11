@@ -19,11 +19,16 @@ TORTOISE_ORM = {
 
 
 def init_tortoise(app):
+    """
+    Initialize Tortoise ORM with FastAPI.
+    Uses TORTOISE_ORM config for consistency.
+    generate_schemas=True works for development; use Aerich migrations for production.
+    """
     settings = get_settings()
     register_tortoise(
         app,
         db_url=settings.DATABASE_URL,
-        modules={"models": ["app.models.user"]},
+        modules={"models": ["app.models.user", "aerich.models"]},
         generate_schemas=True,
         add_exception_handlers=True,
     )
