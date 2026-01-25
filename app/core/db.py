@@ -1,4 +1,3 @@
-# from tortoise import Tortoise
 from tortoise.contrib.fastapi import register_tortoise
 
 from app.core.config import get_settings
@@ -9,7 +8,7 @@ TORTOISE_ORM = {
     "apps": {
         "models": {
             "models": [
-                "app.models.user",
+                "app.models",
                 "aerich.models",
             ],
             "default_connection": "default",
@@ -28,7 +27,7 @@ def init_tortoise(app):
     register_tortoise(
         app,
         db_url=settings.DATABASE_URL,
-        modules={"models": ["app.models.user", "aerich.models"]},
+        modules={"models": ["app.models", "aerich.models"]},
         generate_schemas=True,
         add_exception_handlers=True,
     )
